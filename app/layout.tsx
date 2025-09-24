@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       ],
     },
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -59,15 +59,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="alternate" type="application/rss+xml" title="KTILP Blog RSS Feed" href="/rss" />
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="KTILP Hindi & English Stories RSS Feed"
-          href="/watch-reels/rss"
-        />
-      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
