@@ -9,7 +9,6 @@ import {
   Clock,
   Send,
   Youtube,
-  Facebook,
   Globe,
   MessageCircle,
   BookOpen,
@@ -59,25 +58,18 @@ export default function ContactPage() {
       color: "text-red-500",
     },
     {
-      icon: Facebook,
-      name: "Facebook",
-      handle: "InteractiveLearningProgram",
-      url: "https://www.facebook.com/InteractiveLearningProgram",
-      color: "text-blue-500",
-    },
-    {
       icon: Globe,
-      name: "Website",
-      handle: "ktilp.com",
-      url: "https://ktilp.com",
-      color: "text-green-500",
-    },
-    {
-      icon: BookOpen,
       name: "Udemy",
       handle: "Nishant Shukla",
       url: "https://www.udemy.com/user/kritika-shukla-20/",
       color: "text-purple-500",
+    },
+    {
+      icon: BookOpen,
+      name: "Website",
+      handle: "ktilp.com",
+      url: "https://ktilp.com",
+      color: "text-blue-500",
     },
   ]
 
@@ -85,22 +77,27 @@ export default function ContactPage() {
     {
       question: "How long does it take to see results?",
       answer:
-        "Most students notice improvement in their confidence and understanding within 2-3 weeks of consistent practice with our movie-based method.",
+        "Most students notice improvement in their English speaking confidence within 2-3 weeks of consistent practice with our proven methodology.",
     },
     {
       question: "Do I need any prior English knowledge?",
       answer:
-        "Our course is designed for all levels. We start with basics and gradually progress to advanced concepts, making it suitable for beginners to intermediate learners.",
+        "Our courses are designed for all levels. We start with basics and gradually progress to advanced concepts, making it suitable for beginners to intermediate learners.",
     },
     {
       question: "Can I access the course on mobile?",
       answer:
-        "Yes! Our course is fully optimized for mobile devices, tablets, and desktops. You can learn anywhere, anytime.",
+        "Yes! Our courses are fully optimized for mobile devices, tablets, and desktops. You can learn anywhere, anytime with 13 hours of on-demand video content.",
     },
     {
       question: "Is there a money-back guarantee?",
       answer:
-        "We offer a 30-day money-back guarantee. If you're not satisfied with the course, we'll refund your payment.",
+        "We offer a 30-day money-back guarantee. If you're not satisfied with the course, we'll refund your payment without any questions.",
+    },
+    {
+      question: "What makes KTILP different?",
+      answer:
+        "With 14 years of experience, 40,000+ students, and 97% success rate, KTILP uses a unique Hindi-English methodology that makes learning natural and effective.",
     },
   ]
 
@@ -110,22 +107,22 @@ export default function ContactPage() {
 
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-slate-50 bg-[url('/images/logo-background-pattern.svg')] opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-slate-50"></div>
         <div className="container relative px-4 md:px-6">
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
+          <div className="text-center space-y-8 max-w-4xl mx-auto animate-fade-in">
             <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-blue-200">
-              📞 Get in Touch
+              Get in Touch
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-gray-900">
-              Elevate Your
+              Connect with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
                 {" "}
-                Professional English
+                KTILP Today
               </span>
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Seeking expert consultation for career advancement? Inquire about our Business English courses and
-              professional development programs. We're dedicated to guiding you toward your career aspirations.
+              Have questions about our English speaking courses or mindfulness programs? Reach out to us through any
+              channel. We respond within 24 hours.
             </p>
 
             <div className="flex flex-wrap justify-center gap-8 text-sm text-slate-600">
@@ -154,16 +151,15 @@ export default function ContactPage() {
             <p className="text-slate-600 text-lg">Choose the method that works best for you</p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {contactMethods.map((method, index) => (
               <Card
                 key={index}
-                className="bg-white shadow-md border-slate-200 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white shadow-md border-slate-200 hover:shadow-lg transition-shadow duration-300 animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="pt-8 pb-6">
-                  <div
-                    className={`flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mx-auto mb-4 transition-colors`}
-                  >
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mx-auto mb-4">
                     <method.icon className={`h-8 w-8 ${method.color}`} />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{method.title}</h3>
@@ -187,7 +183,7 @@ export default function ContactPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               <p className="text-slate-600 mb-8">
                 Fill out the form below and we'll get back to you as soon as possible. Whether you have questions about
-                our course or need technical support, we're here to help.
+                our courses or need support, we're here to help.
               </p>
 
               <Card className="bg-white shadow-md border-slate-200">
@@ -257,11 +253,11 @@ export default function ContactPage() {
             {/* Contact Info & Social */}
             <div className="space-y-8">
               {/* Instructor Info */}
-              <Card className="bg-white shadow-md border-slate-200">
+              <Card className="bg-white shadow-md border-slate-200 hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
                   <div className="flex items-center space-x-4 mb-6">
                     <Image
-                      src="/images/instructor-professional.jpg"
+                      src="/images/nishant-sir-professional.jpg"
                       alt="Nishant Shukla"
                       width={80}
                       height={80}
@@ -270,12 +266,12 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-xl font-bold text-gray-900">Nishant Shukla</h3>
                       <p className="text-blue-600">Founder & Lead Instructor</p>
-                      <p className="text-slate-600 text-sm">English Trainer • YouTuber • Educator</p>
+                      <p className="text-slate-600 text-sm">English Trainer • Mindfulness Coach • Educator</p>
                     </div>
                   </div>
                   <p className="text-slate-600 mb-4">
-                    "I personally read and respond to every message. Your success in learning English is my priority,
-                    and I'm here to support you throughout your journey."
+                    "I personally read and respond to every message. Your success in learning English and achieving
+                    inner peace is my priority."
                   </p>
                   <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle className="h-4 w-4 text-green-400" />
@@ -287,7 +283,7 @@ export default function ContactPage() {
               {/* Social Media */}
               <Card className="bg-white shadow-md border-slate-200">
                 <CardHeader>
-                  <CardTitle className="text-gray-900">Follow Us on Social Media</CardTitle>
+                  <CardTitle className="text-gray-900">Follow Us & Learn</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {socialLinks.map((social, index) => (
@@ -295,6 +291,7 @@ export default function ContactPage() {
                       key={index}
                       href={social.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center space-x-4 p-3 rounded-lg bg-slate-100 hover:bg-slate-200 transition-colors group"
                     >
                       <social.icon className={`h-6 w-6 ${social.color}`} />
@@ -310,25 +307,25 @@ export default function ContactPage() {
               </Card>
 
               {/* Quick Stats */}
-              <Card className="bg-gradient-to-r from-blue-100 to-blue-50 border-blue-200">
+              <Card className="bg-gradient-to-r from-blue-100 to-blue-50 border-blue-200 hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6">Why Students Choose KTILP</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-6">Why Choose KTILP</h3>
                   <div className="grid gap-4 md:grid-cols-2">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-600">10K+</div>
-                      <div className="text-slate-600 text-sm">Happy Students</div>
+                      <div className="text-2xl font-bold text-blue-600">40K+</div>
+                      <div className="text-slate-600 text-sm">Students Enrolled</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-700">4.9/5</div>
-                      <div className="text-slate-600 text-sm">Average Rating</div>
+                      <div className="text-2xl font-bold text-blue-700">97%</div>
+                      <div className="text-slate-600 text-sm">Success Rate</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-800">24hrs</div>
-                      <div className="text-slate-600 text-sm">Response Time</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-blue-900">5+</div>
+                      <div className="text-2xl font-bold text-blue-800">14</div>
                       <div className="text-slate-600 text-sm">Years Experience</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-blue-900">2</div>
+                      <div className="text-slate-600 text-sm">Specialized Courses</div>
                     </div>
                   </div>
                 </CardContent>
@@ -348,7 +345,11 @@ export default function ContactPage() {
 
           <div className="max-w-4xl mx-auto space-y-6">
             {faqs.map((faq, index) => (
-              <Card key={index} className="bg-white shadow-md border-slate-200">
+              <Card
+                key={index}
+                className="bg-white shadow-md border-slate-200 hover:shadow-lg transition-shadow animate-fade-in"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-slate-600">{faq.answer}</p>

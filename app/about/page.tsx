@@ -9,40 +9,40 @@ import Footer from "../components/Footer"
 
 export default function AboutPage() {
   const achievements = [
-    { icon: Users, number: "10K+", label: "Professionals Trained", color: "text-blue-400" },
-    { icon: BookOpen, number: "20+", label: "Business English Courses", color: "text-green-400" },
-    { icon: Star, number: "4.9/5", label: "Average Course Rating", color: "text-yellow-400" },
-    { icon: Award, number: "5+", label: "Years of Experience", color: "text-green-400" },
+    { icon: Users, number: "40K+", label: "Enrolled Students", color: "text-blue-400" },
+    { icon: BookOpen, number: "14", label: "Years of Experience", color: "text-green-400" },
+    { icon: Star, number: "97%", label: "Success Rate", color: "text-yellow-400" },
+    { icon: Award, number: "2", label: "Specialized Courses", color: "text-purple-400" },
   ]
 
   const skills = [
-    "Business English Communication",
-    "Presentation Skills Training",
-    "Negotiation English",
-    "Cross-Cultural Communication",
-    "Executive Coaching",
-    "Corporate Training",
-    "Leadership Communication",
-    "Professional Writing",
+    "English Speaking in Hindi",
+    "Communication Skills",
+    "Business Storytelling",
+    "Mindfulness Training",
+    "Mental Wellness Coaching",
+    "Self-Awareness Development",
+    "Confidence Building",
+    "Professional Development",
   ]
 
   const testimonials = [
     {
-      name: "Priya Sharma",
+      name: "Rajesh Kumar",
       role: "Software Engineer",
-      content: "Nishant sir's business English course helped me communicate effectively with international clients.",
+      content: "KTILP's English course transformed my confidence. I can now speak fluently in professional meetings.",
       rating: 5,
     },
     {
-      name: "Rahul Patel",
+      name: "Priya Sharma",
       role: "Marketing Manager",
-      content: "The presentation skills training was invaluable. I now deliver confident and persuasive presentations.",
+      content: "The mindfulness course helped me manage stress and improve my overall well-being significantly.",
       rating: 5,
     },
     {
-      name: "Anjali Singh",
-      role: "Team Lead",
-      content: "KTILP's corporate training improved our team's communication and collaboration significantly.",
+      name: "Amit Patel",
+      role: "Business Owner",
+      content: "Nishant sir's teaching methodology is unique and effective. Highly recommended for career growth.",
       rating: 5,
     },
   ]
@@ -52,27 +52,28 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden bg-[url('/images/logo-background-pattern.svg')]">
+      <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
         <div className="container relative px-4 md:px-6">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-12 lg:grid-cols-2 items-center animate-fade-in">
             <div className="space-y-8">
               <Badge variant="secondary" className="bg-blue-500/20 text-blue-400 border-blue-500/30">
-                👨‍🏫 Meet Your Instructor
+                About KTILP
               </Badge>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl text-slate-900">
-                Meet
+                Master English &
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
                   {" "}
-                  Nishant Shukla
+                  Transform Your Life
                 </span>
               </h1>
               <p className="text-xl text-slate-700 leading-relaxed">
-                Business English Trainer • Corporate Educator • Communication Coach
+                KTILP - Kritika's The Interactive Learning Program. Empowering 40,000+ students with English
+                communication skills and mindfulness training for 14 years.
               </p>
               <p className="text-lg text-slate-700 leading-relaxed">
-                Empowering professionals with effective communication skills for career advancement. Specializing in
-                business English, presentation skills, and cross-cultural communication.
+                Learn English Speaking in Hindi with 97% success rate. Master communication skills, business
+                storytelling, and inner peace through our proven methodology.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -85,55 +86,49 @@ export default function AboutPage() {
                     Explore Courses
                   </Button>
                 </Link>
-                <Link href="https://ktilp.com" target="_blank">
+                <Link href="https://www.youtube.com/@ktilplearning/featured" target="_blank">
                   <Button
                     size="lg"
                     variant="outline"
                     className="border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white bg-transparent"
                   >
-                    <Globe className="mr-2 h-5 w-5" />
-                    Visit Our Website
+                    <Youtube className="mr-2 h-5 w-5" />
+                    Watch on YouTube
                   </Button>
                 </Link>
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative animate-slide-in-right">
               <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl"></div>
               <div className="relative">
                 <Image
-                  src="/images/instructor-professional.jpg"
-                  alt="Nishant Shukla - Business English Trainer"
+                  src="/images/nishant-sir-professional.jpg"
+                  alt="Nishant Shukla - KTILP Founder"
                   width={500}
                   height={500}
                   className="rounded-2xl border-4 border-blue-500/30 shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-slate-100/90 backdrop-blur rounded-xl p-4 border border-slate-200">
-                  <div className="flex items-center space-x-2">
-                    <Globe className="h-6 w-6 text-blue-600" />
-                    <div>
-                      <div className="text-slate-900 font-semibold">10K+ Connections</div>
-                      <div className="text-slate-500 text-sm">Website Visitors</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Achievements Section */}
       <section className="py-20 bg-slate-100/50">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Achievements & Impact</h2>
-            <p className="text-slate-700 text-lg">Numbers that speak for themselves</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Impact</h2>
+            <p className="text-slate-700 text-lg">Real numbers from real students</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {achievements.map((achievement, index) => (
-              <Card key={index} className="bg-white border-slate-200 backdrop-blur text-center">
+              <Card
+                key={index}
+                className="bg-white border-slate-200 backdrop-blur text-center animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
                 <CardContent className="pt-8 pb-6">
                   <achievement.icon className={`h-12 w-12 ${achievement.color} mx-auto mb-4`} />
                   <div className={`text-3xl font-bold ${achievement.color} mb-2`}>{achievement.number}</div>
@@ -150,50 +145,48 @@ export default function AboutPage() {
         <div className="container px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">My Story & Mission</h2>
-              <p className="text-slate-700 text-lg">The journey to empowering professionals</p>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Mission & Vision</h2>
+              <p className="text-slate-700 text-lg">Transforming lives through English and mindfulness</p>
             </div>
 
             <div className="grid gap-12 lg:grid-cols-2 items-center">
               <div className="space-y-6">
-                <div className="bg-white rounded-lg p-6 border border-slate-200">
+                <div className="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg transition-shadow">
                   <Lightbulb className="h-8 w-8 text-yellow-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">The Inspiration</h3>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Our Vision</h3>
                   <p className="text-slate-700">
-                    Recognizing the critical need for effective communication in the global business environment, I
-                    founded KTILP to provide professionals with the skills to excel in their careers.
+                    To create a world where English communication and mindfulness are accessible to everyone, enabling
+                    personal and professional growth for millions.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 border border-slate-200">
+                <div className="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg transition-shadow">
                   <Target className="h-8 w-8 text-blue-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">The Mission</h3>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Our Mission</h3>
                   <p className="text-slate-700">
-                    To empower professionals with the communication skills they need to succeed in today's competitive
-                    business world. Through targeted training and personalized coaching, I help individuals and teams
-                    achieve their full potential.
+                    Empower professionals with English speaking skills in Hindi and mindfulness training. Help 40,000+
+                    students achieve 97% success rate through innovative, interactive learning.
                   </p>
                 </div>
 
-                <div className="bg-white rounded-lg p-6 border border-slate-200">
+                <div className="bg-white rounded-lg p-6 border border-slate-200 hover:shadow-lg transition-shadow">
                   <Heart className="h-8 w-8 text-red-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-slate-900 mb-3">The Impact</h3>
+                  <h3 className="text-xl font-semibold text-slate-900 mb-3">Our Impact</h3>
                   <p className="text-slate-700">
-                    Witnessing professionals gain confidence, advance their careers, and achieve their goals through
-                    improved communication skills is the ultimate reward.
+                    Witnessing students gain confidence, advance careers, and achieve inner peace through our 14 years
+                    of proven methodology and personalized support.
                   </p>
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative animate-float">
                 <Image
-                  src="/images/instructor-casual.jpg"
+                  src="/images/nishant-sir-casual.jpg"
                   alt="Nishant Shukla teaching"
                   width={500}
                   height={600}
                   className="rounded-2xl shadow-2xl"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-50/50 to-transparent rounded-2xl"></div>
               </div>
             </div>
           </div>
@@ -204,14 +197,17 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-100/50">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Skills & Expertise</h2>
-            <p className="text-slate-700 text-lg">Areas of specialization in English education</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">What We Teach</h2>
+            <p className="text-slate-700 text-lg">Comprehensive programs for English and wellness</p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {skills.map((skill, index) => (
-                <div key={index} className="bg-white rounded-lg p-4 border border-slate-200 text-center">
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-4 border border-slate-200 text-center hover:scale-105 transition-transform"
+                >
                   <span className="text-slate-900 font-medium">{skill}</span>
                 </div>
               ))}
@@ -224,13 +220,13 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">What Professionals Say</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Student Success Stories</h2>
             <p className="text-slate-700 text-lg">Real feedback from real students</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white border-slate-200 backdrop-blur">
+              <Card key={index} className="bg-white border-slate-200 backdrop-blur hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -258,9 +254,9 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
         <div className="container px-4 md:px-6">
           <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900">Elevate Your Communication Skills</h2>
+            <h2 className="text-3xl font-bold text-slate-900">Start Your Transformation Today</h2>
             <p className="text-xl text-slate-700">
-              Join professionals who have transformed their careers with KTILP's expert training.
+              Join 40,000+ students who have transformed their lives with KTILP's proven methodology.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,7 +266,7 @@ export default function AboutPage() {
                   className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white"
                 >
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Explore Courses
+                  Enroll Now
                 </Button>
               </Link>
               <Link href="/contact">
@@ -294,9 +290,9 @@ export default function AboutPage() {
                 <Youtube className="h-8 w-8" />
               </Link>
               <Link
-                href="https://ktilp.com"
+                href="https://www.udemy.com/user/kritika-shukla-20/"
                 target="_blank"
-                className="text-slate-500 hover:text-blue-400 transition-colors"
+                className="text-slate-500 hover:text-purple-400 transition-colors"
               >
                 <Globe className="h-8 w-8" />
               </Link>
