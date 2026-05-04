@@ -32,8 +32,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-gray-900"
           >
-            Learn. Apply. <br />
-            <span className="text-gradient">Grow.</span>
+            Speak Confidently. <br />
+            <span className="text-gradient">Grow Faster.</span>
           </motion.h1>
 
           <motion.p
@@ -51,12 +51,12 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4"
           >
-            <a href="#courses" className="group relative px-8 py-4 bg-[--color-brand-blue] text-white rounded-full font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/30">
+            <a href="#courses" className="group relative px-8 py-4 bg-[#f36c21] text-white rounded-full font-bold text-lg overflow-hidden transition-transform hover:scale-105 active:scale-95 flex items-center justify-center space-x-2 shadow-lg shadow-orange-400/40 hover:bg-[#e05610]">
               <span className="relative z-10">Explore Udemy Courses</span>
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#benefits" className="px-8 py-4 rounded-full font-bold text-lg text-gray-700 border border-gray-300 bg-white hover:bg-gray-50 transition-all flex items-center justify-center space-x-2 shadow-sm">
-              <BookOpen className="w-5 h-5 text-[--color-brand-orange]" />
+            <a href="#benefits" className="px-8 py-4 rounded-full font-bold text-lg text-white bg-[#009ce0] border-2 border-[#009ce0] hover:bg-[#0088cc] transition-all flex items-center justify-center space-x-2 shadow-sm hover:shadow-md">
+              <BookOpen className="w-5 h-5" />
               <span>Why Choose Us?</span>
             </a>
           </motion.div>
