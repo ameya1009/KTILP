@@ -7,22 +7,22 @@ const benefits = [
   {
     title: "Master Your Skills",
     description: "Learn industry-standard practices. Go from zero to mastery in weeks with practical guidance.",
-    icon: <Briefcase className="w-8 h-8 text-[--color-neon-cyan]" />,
+    icon: <Briefcase className="w-8 h-8 text-[--color-brand-blue]" />,
   },
   {
     title: "Ace Interviews",
     description: "Master communication rounds and technical queries. Gain the confidence you need to succeed.",
-    icon: <CheckCircle className="w-8 h-8 text-[--color-neon-magenta]" />,
+    icon: <CheckCircle className="w-8 h-8 text-[--color-brand-orange]" />,
   },
   {
     title: "Advance Your Career",
     description: "Level up your professional trajectory. We teach you how to stand out and earn more.",
-    icon: <Zap className="w-8 h-8 text-[--color-neon-cyan]" />,
+    icon: <Zap className="w-8 h-8 text-[--color-brand-yellow]" />,
   },
   {
     title: "Technical & Soft Skills",
     description: "From App Security to Emotional Intelligence. A holistic approach to personal growth.",
-    icon: <Code2 className="w-8 h-8 text-[--color-neon-magenta]" />,
+    icon: <Code2 className="w-8 h-8 text-[--color-brand-blue]" />,
   },
 ];
 
@@ -66,15 +66,15 @@ function TiltCard({ benefit, index }: { benefit: typeof benefits[0]; index: numb
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative group p-8 rounded-2xl bg-[#111] border border-white/10 hover:border-white/20 transition-colors"
+      className="relative group p-8 rounded-2xl bg-white border border-gray-200 hover:border-gray-300 transition-colors shadow-sm hover:shadow-md"
     >
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[--color-neon-cyan]/10 to-[--color-neon-magenta]/10 opacity-0 group-hover:opacity-100 transition-opacity blur-xl z-0" />
-      <div className="relative z-10" style={{ transform: "translateZ(50px)" }}>
-        <div className="w-16 h-16 rounded-2xl bg-black/50 border border-white/10 flex items-center justify-center mb-6 shadow-inner">
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[--color-brand-blue]/5 to-[--color-brand-orange]/5 opacity-0 group-hover:opacity-100 transition-opacity z-0" />
+      <div className="relative z-10" style={{ transform: "translateZ(30px)" }}>
+        <div className="w-16 h-16 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center mb-6 shadow-sm">
           {benefit.icon}
         </div>
-        <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
-        <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
+        <p className="text-gray-600 leading-relaxed font-medium">{benefit.description}</p>
       </div>
     </motion.div>
   );
@@ -82,15 +82,15 @@ function TiltCard({ benefit, index }: { benefit: typeof benefits[0]; index: numb
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="py-32 relative z-10 bg-[--color-dark-bg]">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+    <section id="benefits" className="py-24 relative z-10 bg-gray-50">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900"
           >
             Why Choose <span className="text-gradient">KTILP?</span>
           </motion.h2>
@@ -99,7 +99,7 @@ export default function Benefits() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl text-gray-400"
+            className="text-xl text-gray-600 font-medium"
           >
             We don't just teach theory. We build careers with hands-on, practical skills that the industry actually needs.
           </motion.p>

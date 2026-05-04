@@ -22,21 +22,21 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="py-32 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="testimonials" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Decorative gradient */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[300px] bg-[--color-neon-cyan] opacity-10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[300px] bg-[--color-brand-blue] opacity-5 blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900"
           >
             Don't Just Take <span className="text-gradient">Our Word For It</span>
           </motion.h2>
-          <p className="text-gray-400 text-lg">Join thousands of students who have already leveled up.</p>
+          <p className="text-gray-600 text-lg font-medium">Join thousands of students who have already leveled up through our Udemy courses.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -47,24 +47,24 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.2 }}
-              className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[--color-neon-cyan]/30 transition-colors backdrop-blur-sm"
+              className="p-8 rounded-2xl bg-white border border-gray-200 hover:border-[--color-brand-blue] hover:shadow-md transition-all"
             >
-              <div className="flex text-[--color-neon-magenta] mb-6 space-x-1">
+              <div className="flex text-[--color-brand-yellow] mb-6 space-x-1">
                 {[...Array(5)].map((_, j) => (
                   <svg key={j} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-300 mb-8 text-lg leading-relaxed">"{t.text}"</p>
+              <p className="text-gray-600 mb-8 text-lg leading-relaxed font-medium">"{t.text}"</p>
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[--color-neon-cyan] to-[--color-neon-magenta] p-[2px]">
-                  <div className="w-full h-full bg-[#111] rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[--color-brand-blue] to-[--color-brand-orange] p-[2px]">
+                  <div className="w-full h-full bg-white rounded-full flex items-center justify-center text-gray-900 font-bold">
                     {t.name.charAt(0)}
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold">{t.name}</h4>
+                  <h4 className="text-gray-900 font-bold">{t.name}</h4>
                   <p className="text-gray-500 text-sm">{t.role}</p>
                 </div>
               </div>
