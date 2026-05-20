@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -6,12 +7,8 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <Link href="/" className="text-3xl font-bold tracking-tighter text-gray-900 mb-6 flex items-center space-x-1">
-              <span className="text-[--color-brand-blue]">K</span>
-              <span className="text-[--color-brand-orange]">T</span>
-              <span className="text-[--color-brand-blue]">I</span>
-              <span className="text-[--color-brand-blue]">L</span>
-              <span className="text-[--color-brand-blue]">P</span>
+            <Link href="/" className="inline-block hover:opacity-90 transition-opacity mb-6">
+              <Logo size="md" />
             </Link>
             <p className="text-gray-600 max-w-sm leading-relaxed mb-6 font-medium">
               Learn, Apply, Grow. Empowering the next generation of top-tier professionals. Master your craft and launch your dream career.

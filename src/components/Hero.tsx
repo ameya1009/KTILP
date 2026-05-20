@@ -1,8 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import HeroScene from "./canvas/HeroScene";
+import dynamic from "next/dynamic";
 import { ArrowRight, BookOpen } from "lucide-react";
+
+const HeroScene = dynamic(() => import("./canvas/HeroScene"), {
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-transparent" />,
+});
 
 export default function Hero() {
   return (
@@ -10,12 +15,9 @@ export default function Hero() {
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-50 via-white to-white z-0"></div>
       
-      {/* 3D Scene */}
-      <HeroScene />
-
       {/* Content Overlay */}
       <div className="container relative z-10 px-6 mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl py-12 lg:py-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -60,6 +62,11 @@ export default function Hero() {
               <span>Why Choose Us?</span>
             </a>
           </motion.div>
+        </div>
+
+        {/* Right Column: HeyGen-style Interactive 3D Canvas */}
+        <div className="relative w-full h-[350px] sm:h-[450px] lg:h-[600px] flex items-center justify-center overflow-visible">
+          <HeroScene />
         </div>
       </div>
     </section>

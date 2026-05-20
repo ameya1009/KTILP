@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Logo from "./Logo";
 import { useState, useEffect } from "react";
 
 export default function Navbar() {
@@ -25,12 +26,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold tracking-tighter text-gray-900 flex items-center space-x-1">
-          <span className="text-[--color-brand-blue]">K</span>
-          <span className="text-[--color-brand-orange]">T</span>
-          <span className="text-[--color-brand-blue]">I</span>
-          <span className="text-[--color-brand-blue]">L</span>
-          <span className="text-[--color-brand-blue]">P</span>
+        <Link href="/" className="hover:opacity-90 transition-opacity">
+          <Logo size="sm" />
         </Link>
         
         <div className="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-600">
